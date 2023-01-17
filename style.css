@@ -4,11 +4,12 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   padding: 50px 20px;
-  font-size: 13px;
+  font-size: 14px;
   background-color: #F2F2F2;
-  color: #0D0C0C;
-  
-  font-family: bely,serif;
+  # color: #0D0C0C;
+  color: #000;
+
+  font-family: alwyn-new-rounded-web, arial;
   font-weight: 400;
   font-style: normal;
 }
@@ -38,7 +39,7 @@ tr th:last-child, tr td:last-child {
 }
 
 table#myTable tr td:nth-child(1), table#myTable tr td:nth-child(2) {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 table#myTable tr td:nth-child(3) {
@@ -52,11 +53,11 @@ table#myTable tr td:nth-child(5) {
 /* Reduce vertical spacing */
  
 div.dataTables_wrapper div.dataTables_info {
-  padding-top: 0px;
+  padding-top: 10px;
 }
  
 table.dataTable.compact tbody th, table.dataTable.compact tbody td {
-  padding: 1px 17px;
+  padding: 5px 17px 4px 17px;
 }
 /* End Reduce vertical spacing */
 
@@ -82,5 +83,18 @@ table#myTable {
 }
 
 .dtsp-searchCont input {
-  font-weight: 800;
+  font-weight: 700;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background-color: none;
+  background: none;
+  color: #0D0C0C !important;
+  font-weight: 700;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: none;
+  background: none;
+  color: #0D0C0C !important;
 }
