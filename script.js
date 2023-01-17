@@ -1,6 +1,7 @@
 $(document).ready( function () {
     var table = $('#myTable').DataTable({
-        "paging": false,
+        "paging": true,
+        "pageLength": 25,
         scrollX: true,
         searchPanes: {
             cascadePanes: true,
@@ -8,7 +9,7 @@ $(document).ready( function () {
             collapse: false,
             orderable: false,
             dtOpts: {
-              scrollY: '212px'
+              scrollY: '248px'
             }
         },
         dom: 'Plfrtip',
