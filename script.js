@@ -2,6 +2,7 @@ $(document).ready( function () {
     var table = $('#myTable').DataTable({
         "paging": true,
         "pageLength": 25,
+        order: [[1, 'asc']],
         scrollX: true,
         searchPanes: {
             cascadePanes: true,
