@@ -51,14 +51,29 @@ $(document).ready( function () {
             window.location.href = url;
         } 
     });
+
     var hamburgerBtn = document.getElementById('hamburgerBtn');
     var verticalContainer = document.querySelector('.dtsp-verticalPanes');
 
-    hamburgerBtn.addEventListener('click', function() {
-        if (verticalContainer.style.display === 'none') {
+    function toggleVerticalContainer() {
+      if (verticalContainer.style.display === 'none') {
         verticalContainer.style.display = 'flex';
-        } else {
+      } else {
         verticalContainer.style.display = 'none';
-        }
-    });
+      }
+    }
+
+    function handleResize() {
+      if (window.innerWidth > 768) {
+        verticalContainer.style.display = 'flex';
+      } else {
+        verticalContainer.style.display = 'none';
+      }
+    }
+
+    hamburgerBtn.addEventListener('click', toggleVerticalContainer);
+    window.addEventListener('resize', handleResize);
+
+    // Initial check on page load
+    handleResize();
 } );
