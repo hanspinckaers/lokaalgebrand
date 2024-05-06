@@ -2,13 +2,13 @@
 
 body {
   max-width: 1024px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  font-size: 13px;
+  /* margin: 0 auto; */
+  padding: 20px 20px;
+  font-size: 11px;
   background-color: #F2F2F2;
   color: #0D0C0C;
   
-  font-family: bely,serif;
+  font-family: system-ui,serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -19,6 +19,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   text-decoration: underline;
+  padding-bottom: 0.5em;
 }
 
 tr th, tr td {
@@ -46,7 +47,7 @@ table#myTable tr td:nth-child(3) {
 }
 
 table#myTable tr td:nth-child(5) {
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 
 /* Reduce vertical spacing */
@@ -56,7 +57,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
  
 table.dataTable.compact tbody th, table.dataTable.compact tbody td {
-  padding: 1px 17px;
+  padding: 3px 17px;
 }
 /* End Reduce vertical spacing */
 
@@ -83,4 +84,130 @@ table#myTable {
 
 .dtsp-searchCont input {
   font-weight: 800;
+}
+div.dtsp-panesContainer div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill {
+  /* background-color: unset; */
+  background-color: #eeeeee;
+}
+/* for vertical panes */
+div.dtsp-verticalContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+ 
+div.dtsp-verticalContainer div.dtsp-verticalPanes,
+div.dtsp-verticalContainer div.container{
+    width: 30%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+ 
+div.dtsp-verticalContainer div.dtsp-verticalPanes{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 20%;
+    max-width: 300px;
+    min-width: 200px;
+}
+ 
+div.dtsp-verticalPanes {
+    margin-right: 20px;
+}
+ 
+div.dtsp-title {
+    margin-right: 0px !important;
+    margin-top: 13px !important;
+}
+ 
+input.dtsp-search {
+    min-width: 0px !important;
+    padding-left: 0px !important;
+    margin: 0px !important;
+}
+ 
+div.dtsp-verticalContainer div.dtsp-verticalPanes div.dtsp-searchPanes{
+    flex-direction: column;
+    flex-basis: 0px;
+}
+ 
+div.dtsp-verticalContainer div.dtsp-verticalPanes div.dtsp-searchPanes div.dtsp-searchPane{
+    flex-basis: 0px;
+}
+ 
+div.dtsp-verticalContainer div.container{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 60%;
+}
+ 
+div.dtsp-panesContainer {
+    /* border: 1px solid #ccc; */
+    /* border-radius: 6px; */
+    /* padding: 1em !important; */
+    padding: 30px 2.5em 0em !important
+}
+ 
+div.dtsp-titleRow {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+ 
+div.dtsp-titleRow div.dtsp-title {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+ 
+html.dark div.dtsp-panesContainer {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* tame search panes */
+div.dtsp-panesContainer div.dataTables_scrollBody {
+  height: unset !important;
+  max-height: 295px !important;
+}
+div.dtsp-title {
+  display: none;
+}
+div.dtsp-panesContainer button.dtsp-clearAll, div.dtsp-panesContainer button.dtsp-collapseAll, div.dtsp-panesContainer button.dtsp-showAll {
+  background-color: #eeeeee;
+}
+
+/* simulate clickable */
+table.dataTable tbody tr {
+  cursor: pointer;
+}
+
+/* */
+div.container {
+  font-size: 10px;
+}
+
+/* hide on mobile */
+@media screen and (max-width: 768px) {
+  div.dtsp-verticalPanes {
+    display: none;
+  }
+
+  #hamburgerBtn {
+    display: block;
+    background-color: #F21D1D;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #hamburgerBtn {
+    display: none;
+  }
 }
