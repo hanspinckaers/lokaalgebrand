@@ -4,6 +4,7 @@ $(document).ready( function () {
         "paging": true,
         "pageLength": 50,
         scrollX: true,
+        fixedColumns: true,
         searchPanes: {
             cascadePanes: true,
             layout: 'columns-1',
@@ -19,7 +20,7 @@ $(document).ready( function () {
             // { "width": "10%", "targets": 1 },
             // { "width": "50%", "targets": 2 },
             // { "width": "10%", "targets": 3 },
-            // { "width": "20%", "targets": 4 },
+            // { "width": "1000px", "targets": 6 },
             {
                 searchPanes: {
                     show: false
