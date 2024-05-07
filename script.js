@@ -57,15 +57,17 @@ $(document).ready( function () {
     var verticalContainer = document.querySelector('.dtsp-verticalPanes');
 
     function toggleVerticalContainer() {
-      if (verticalContainer.style.display === 'none') {
+      if (verticalContainer.style.display != 'flex') {
         verticalContainer.style.display = 'flex';
+        hamburgerBtn.textContent = 'Hide filters';
       } else {
         verticalContainer.style.display = 'none';
+        hamburgerBtn.textContent = 'Show filters';
       }
     }
 
     function handleResize() {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 965) {
         verticalContainer.style.display = 'flex';
       } else {
         verticalContainer.style.display = 'none';
@@ -74,7 +76,4 @@ $(document).ready( function () {
 
     hamburgerBtn.addEventListener('click', toggleVerticalContainer);
     window.addEventListener('resize', handleResize);
-
-    // Initial check on page load
-    handleResize();
 } );
