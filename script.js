@@ -70,7 +70,9 @@ $(document).ready( function () {
       if (window.innerWidth > 965) {
         verticalContainer.style.display = 'flex';
       } else {
-        verticalContainer.style.display = 'none';
+        if (hamburgerBtn.textContent === 'Show filters') {
+            verticalContainer.style.display = 'none';
+        }
       }
     }
 
