@@ -208,9 +208,9 @@ div.container {
 
 /* hide on mobile */
 @media screen and (max-width: 965px) {
-  /* div.dtsp-verticalPanes { */
-    /* display: none; */
-  /* } */
+  div.dtsp-verticalPanes {
+    display: none;
+  }
   .container, .container-sm {
     max-width: 100%;
     padding: 0px;
