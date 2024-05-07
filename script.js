@@ -57,7 +57,7 @@ $(document).ready( function () {
     var verticalContainer = document.querySelector('.dtsp-verticalPanes');
 
     function toggleVerticalContainer() {
-      if (verticalContainer.style.display != 'flex') {
+      if (hamburgerBtn.textContent === 'Show filters') {
         verticalContainer.style.display = 'flex';
         hamburgerBtn.textContent = 'Hide filters';
       } else {
